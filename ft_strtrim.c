@@ -17,17 +17,25 @@ char	*ft_strtrim(char const *s1, char const *set)
 	char	*p;
 	int		i;
 	int		j;
+	int		s1len;
 
+	s1len = ft_strlen(s1);
 	i = 0;
-	j = ft_strlen(s1) - 1;
-	while (ft_strnstr(set, &s1[i], ft_strlen(set)))
+	j = s1len - 1;
+	while (i < s1len && ft_strnstr(set, &s1[i], ft_strlen(set)) != 0)
 		i++;
-	while (ft_strnstr(set, &s1[j], ft_strlen(set)))
-		j++;
+	while (j > 0 && ft_strnstr(set, &s1[j], ft_strlen(set)) != 0)
+		j--;
 	if (j < i)
-		return (ft_calloc(1, sizeof(char)));
-	p = malloc(j-i);
+	{
+		p = ft_calloc(1, sizeof(char));
+		if (!p)
+			return (NULL);
+		return (p);
+	}
+	p = malloc(j - i + 2);
 	if (!p)
 		return (0);
-	return (ft_substr(s1, i + 1, j - i + 1));
+	ft_strlcpy(p, s1 + i, j - i + 2);
+	return (p);
 }
