@@ -6,7 +6,7 @@
 /*   By: daxferna <daxferna@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/23 19:00:14 by daxferna          #+#    #+#             */
-/*   Updated: 2024/01/24 00:41:11 by daxferna         ###   ########.fr       */
+/*   Updated: 2024/02/04 20:12:35 by daxferna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,9 +20,6 @@ void	*ft_memset(void *b, int c, size_t len)
 	a = b;
 	i = 0;
 	while (i < len)
-	{
-		a[i] = c;
-		i++;
-	}
+		a[i++] = c;
 	return (b);
 }

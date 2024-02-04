@@ -6,7 +6,7 @@
 /*   By: daxferna <daxferna@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/10 22:35:46 by daxferna          #+#    #+#             */
-/*   Updated: 2024/01/23 19:30:27 by daxferna         ###   ########.fr       */
+/*   Updated: 2024/02/04 20:11:10 by daxferna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,6 @@ int	ft_strlen(const char *s)
 
 	i = 0;
 	while (s[i] != '\0')
-	{
 		i++;
-	}
 	return (i);
 }

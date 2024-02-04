@@ -6,7 +6,7 @@
 /*   By: daxferna <daxferna@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/30 01:12:48 by daxferna          #+#    #+#             */
-/*   Updated: 2024/01/30 02:59:47 by daxferna         ###   ########.fr       */
+/*   Updated: 2024/02/04 20:13:47 by daxferna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,9 +49,6 @@ int	ft_atoi(const char *str)
 	else if (str[i] == '+')
 		i++;
 	while (ft_isdigit(str[i]))
-	{
-		res = res * 10 + (str[i] - '0');
-		i++;
-	}
+		res = res * 10 + (str[i++] - '0');
 	return (res * neg);
 }

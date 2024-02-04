@@ -6,7 +6,7 @@
 /*   By: daxferna <daxferna@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/23 20:23:47 by daxferna          #+#    #+#             */
-/*   Updated: 2024/01/23 20:29:28 by daxferna         ###   ########.fr       */
+/*   Updated: 2024/02/04 20:13:28 by daxferna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,9 +20,6 @@ void	*ft_bzero(void *b, size_t len)
 	a = b;
 	i = 0;
 	while (i < len)
-	{
-		a[i] = 0;
-		i++;
-	}
+		a[i++] = 0;
 	return (b);
 }
