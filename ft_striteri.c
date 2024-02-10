@@ -1,56 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
+/*   ft_striteri.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: daxferna <daxferna@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/04 19:01:24 by daxferna          #+#    #+#             */
-/*   Updated: 2024/02/08 20:11:36 by daxferna         ###   ########.fr       */
+/*   Created: 2024/02/04 19:01:43 by daxferna          #+#    #+#             */
+/*   Updated: 2024/02/08 19:37:46 by daxferna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static void	ft_print(int num, int fd)
+void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 {
 	int		i;
-	char	p;
-	char	n[10];
 
 	i = 0;
-	while (num > 0)
+	while (s[i] != 0)
 	{
-		n[i++] = '0' + num % 10;
-		num /= 10;
-	}
-	while (i > 0)
-	{
-		i--;
-		p = n[i];
-		write(fd, &p, 1);
-	}
-}
-
-void	ft_putnbr_fd(int n, int fd)
-{
-	int	num;
-
-	num = n;
-	if (num == -2147483648)
-	{
-		write(fd, "-2147483648", 11);
-	}
-	else
-	{
-		if (num < 0)
-		{
-			num = -num;
-			write(fd, "-", 1);
-		}
-		if (num == 0)
-			write(fd, "0", 1);
-		else
-			ft_print(num, fd);
+		f(i, &s[i]);
+		i++;
 	}
 }

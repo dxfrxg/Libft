@@ -1,56 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
+/*   ft_strmapi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: daxferna <daxferna@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/04 19:01:24 by daxferna          #+#    #+#             */
-/*   Updated: 2024/02/08 20:11:36 by daxferna         ###   ########.fr       */
+/*   Created: 2024/02/04 19:01:46 by daxferna          #+#    #+#             */
+/*   Updated: 2024/02/08 19:53:11 by daxferna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static void	ft_print(int num, int fd)
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
+	char	*p;
 	int		i;
-	char	p;
-	char	n[10];
 
+	p = malloc(ft_strlen(s) * sizeof(char) + 1);
+	if (!p)
+		return (0);
 	i = 0;
-	while (num > 0)
+	while (s[i] != 0)
 	{
-		n[i++] = '0' + num % 10;
-		num /= 10;
+		p[i] = f(i, s[i]);
+		i++;
 	}
-	while (i > 0)
-	{
-		i--;
-		p = n[i];
-		write(fd, &p, 1);
-	}
-}
-
-void	ft_putnbr_fd(int n, int fd)
-{
-	int	num;
-
-	num = n;
-	if (num == -2147483648)
-	{
-		write(fd, "-2147483648", 11);
-	}
-	else
-	{
-		if (num < 0)
-		{
-			num = -num;
-			write(fd, "-", 1);
-		}
-		if (num == 0)
-			write(fd, "0", 1);
-		else
-			ft_print(num, fd);
-	}
+	p[i] = 0;
+	return (p);
 }

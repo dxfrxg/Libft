@@ -6,7 +6,7 @@
 /*   By: daxferna <daxferna@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/21 18:10:16 by daxferna          #+#    #+#             */
-/*   Updated: 2024/02/04 21:22:19 by daxferna         ###   ########.fr       */
+/*   Updated: 2024/02/08 20:16:05 by daxferna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,13 +42,13 @@ int				ft_atoi(const char *str);
 char			*ft_substr(char const *s, unsigned int start, size_t len);
 char			*ft_strjoin(char const *s1, char const *s2);
 char			*ft_strtrim(char const *s1, char const *set);
-void			ft_putchar_fd(char c, int fd);
+char			**ft_split(char const *s, char c);
 char			*ft_itoa(int n);
-/*void			ft_putnbr_fd(int n, int fd);
-void			ft_putstr_fd(char *s, int fd);
 char			*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 void			ft_striteri(char *s, void (*f)(unsigned int, char*));
-char			**ft_split(char const *s, char c);
-void			ft_putendl_fd(char *s, int fd);*/
+void			ft_putchar_fd(char c, int fd);
+void			ft_putstr_fd(char *s, int fd);
+void			ft_putendl_fd(char *s, int fd);
+void			ft_putnbr_fd(int n, int fd);
 
 #endif
