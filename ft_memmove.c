@@ -6,7 +6,7 @@
 /*   By: daxferna <daxferna@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/24 00:28:55 by daxferna          #+#    #+#             */
-/*   Updated: 2024/01/26 17:44:49 by daxferna         ###   ########.fr       */
+/*   Updated: 2024/02/10 23:29:29 by daxferna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ void	*ft_memmove(void *dst, const void *src, size_t n)
 		while (i > 0 && (dst != 0 || src != 0))
 		{
 			d[i - 1] = s[i - 1];
-			i--;
+			i++;
 		}
 		return (dst);
 	}
