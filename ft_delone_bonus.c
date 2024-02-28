@@ -1,22 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstlast_bonus.c                                 :+:      :+:    :+:   */
+/*   ft_delone_bonus.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dxfrxg <dxfrxg@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/24 20:21:43 by dxfrxg            #+#    #+#             */
-/*   Updated: 2024/02/28 18:33:09 by dxfrxg           ###   ########.fr       */
+/*   Created: 2024/02/28 18:38:00 by dxfrxg            #+#    #+#             */
+/*   Updated: 2024/02/28 18:40:43 by dxfrxg           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_list	*ft_lstlast(t_list *lst)
+void ft_lstdelone(t_list *lst, void (*del)(void*))
 {
-	if (!lst)
-		return (0);
-	while (lst->next)
-		lst = lst->next;
-	return (lst);
+	return ;
 }
