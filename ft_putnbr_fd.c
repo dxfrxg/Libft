@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: daxferna <daxferna@student.42.fr>          +#+  +:+       +#+        */
+/*   By: daxferna <daxferna@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/04 19:01:24 by daxferna          #+#    #+#             */
-/*   Updated: 2024/02/08 20:11:36 by daxferna         ###   ########.fr       */
+/*   Updated: 2024/03/04 23:25:15 by daxferna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,8 +27,8 @@ static void	ft_print(int num, int fd)
 	while (i > 0)
 	{
 		i--;
-		p = n[i];
-		write(fd, &p, 1);
+		p = n[i--];
+		ft_putchar_fd(p, fd);
 	}
 }
 
@@ -38,18 +38,16 @@ void	ft_putnbr_fd(int n, int fd)
 
 	num = n;
 	if (num == -2147483648)
-	{
-		write(fd, "-2147483648", 11);
-	}
+		ft_putstr_fd("-2147483648", fd);
 	else
 	{
 		if (num < 0)
 		{
 			num = -num;
-			write(fd, "-", 1);
+			ft_putchar_fd('-', fd);
 		}
 		if (num == 0)
-			write(fd, "0", 1);
+			ft_putchar_fd('0', fd);
 		else
 			ft_print(num, fd);
 	}

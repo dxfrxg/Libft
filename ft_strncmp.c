@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strncmp.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: daxferna <daxferna@student.42.fr>          +#+  +:+       +#+        */
+/*   By: daxferna <daxferna@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/27 00:03:45 by daxferna          #+#    #+#             */
-/*   Updated: 2024/01/27 00:10:08 by daxferna         ###   ########.fr       */
+/*   Updated: 2024/03/04 17:15:28 by daxferna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,10 +23,9 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 	i = 0;
 	while (i < n && (str1[i] != 0 || str2[i] != 0))
 	{
-		if (str1[i] == str2[i])
-			i++;
-		else
+		if (str1[i] != str2[i])
 			return (str1[i] - str2[i]);
+		i++;
 	}
 	return (0);
 }

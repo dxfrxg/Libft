@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: daxferna <daxferna@student.42.fr>          +#+  +:+       +#+        */
+/*   By: daxferna <daxferna@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/23 20:23:47 by daxferna          #+#    #+#             */
-/*   Updated: 2024/02/04 20:13:28 by daxferna         ###   ########.fr       */
+/*   Updated: 2024/03/03 18:18:33 by daxferna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,5 @@
 
 void	*ft_bzero(void *b, size_t len)
 {
-	size_t	i;
-	char	*a;
-
-	a = b;
-	i = 0;
-	while (i < len)
-		a[i++] = 0;
-	return (b);
+	return (ft_memset(b, 0, len));
 }

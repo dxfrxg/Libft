@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: daxferna <daxferna@student.42.fr>          +#+  +:+       +#+        */
+/*   By: daxferna <daxferna@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/30 01:12:48 by daxferna          #+#    #+#             */
-/*   Updated: 2024/02/04 20:13:47 by daxferna         ###   ########.fr       */
+/*   Updated: 2024/03/04 17:57:45 by daxferna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,22 +33,20 @@ static int	ft_isspace(int c)
 int	ft_atoi(const char *str)
 {
 	int	neg;
-	int	i;
 	int	res;
 
 	neg = 1;
-	i = 0;
 	res = 0;
-	while (ft_isspace(str[i]))
-		i++;
-	if (str[i] == '-')
+	while (ft_isspace(*str))
+		str++;
+	if (*str == '-')
 	{
 		neg = -1;
-		i++;
+		str++;
 	}
-	else if (str[i] == '+')
-		i++;
-	while (ft_isdigit(str[i]))
-		res = res * 10 + (str[i++] - '0');
+	else if (*str == '+')
+		str++;
+	while (ft_isdigit(*str))
+		res = res * 10 + (*str++ - '0');
 	return (res * neg);
 }

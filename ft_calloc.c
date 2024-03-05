@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: daxferna <daxferna@student.42.fr>          +#+  +:+       +#+        */
+/*   By: daxferna <daxferna@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/30 01:12:35 by daxferna          #+#    #+#             */
-/*   Updated: 2024/01/30 01:44:33 by daxferna         ###   ########.fr       */
+/*   Updated: 2024/03/04 18:09:27 by daxferna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ void	*ft_calloc(size_t count, size_t size)
 	void	*p;
 
 	p = malloc(count * size);
-	if (p != 0)
+	if (p)
 		ft_memset(p, 0, count * size);
 	return (p);
 }

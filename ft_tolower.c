@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_tolower.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: daxferna <daxferna@student.42.fr>          +#+  +:+       +#+        */
+/*   By: daxferna <daxferna@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/13 21:06:14 by daxferna          #+#    #+#             */
-/*   Updated: 2024/01/23 19:30:36 by daxferna         ###   ########.fr       */
+/*   Updated: 2024/03/03 19:28:46 by daxferna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,7 @@
 
 int	ft_tolower(int c)
 {
-	if (c > 64 && c < 91)
+	if (c >= 'A' && c <= 'Z')
 		return (c + 32);
-	else
-		return (c);
+	return (c);
 }

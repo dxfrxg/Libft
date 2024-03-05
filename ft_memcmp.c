@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: daxferna <daxferna@student.42.fr>          +#+  +:+       +#+        */
+/*   By: daxferna <daxferna@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/26 18:06:28 by daxferna          #+#    #+#             */
-/*   Updated: 2024/01/27 00:11:38 by daxferna         ###   ########.fr       */
+/*   Updated: 2024/03/04 17:22:26 by daxferna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,10 +23,9 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 	i = 0;
 	while (i < n)
 	{
-		if (str1[i] == str2[i])
-			i++;
-		else
+		if (str1[i] != str2[i])
 			return (str1[i] - str2[i]);
+		i++;
 	}
 	return (0);
 }

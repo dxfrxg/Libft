@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isdigit.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: daxferna <daxferna@student.42.fr>          +#+  +:+       +#+        */
+/*   By: daxferna <daxferna@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/10 21:45:22 by daxferna          #+#    #+#             */
-/*   Updated: 2024/01/23 19:30:11 by daxferna         ###   ########.fr       */
+/*   Updated: 2024/03/03 17:37:16 by daxferna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	ft_isdigit(int c)
 {
-	if (c > 47 && c < 58)
+	if (c >= '0' && c <= '9')
 		return (1);
 	return (0);
 }
