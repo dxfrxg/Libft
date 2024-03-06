@@ -15,19 +15,24 @@
 char	*ft_strnstr(const char *hay, const char *nee, size_t len)
 {
 	size_t	i;
+	size_t	j;
 	size_t	k;
 
 	i = 0;
 	if (*nee == 0)
 		return ((char *)hay);
-	while (hay[i] != 0 && i < len)
+	while (hay[i] != '\0' && i < len)
 	{
+		j = i;
 		k = 0;
-		while (hay[i + k] == nee[k] && i + k < len && nee[k] != 0)
+		while (hay[j] == nee[k] && j < len)
+		{
+			j++;
 			k++;
-		if (nee[k] == 0)
-			return ((char *)&hay[i]);
+			if (nee[k] == 0)
+				return ((char *)&hay[i]);
+		}
 		i++;
 	}
-	return (0);
+	return (NULL);
 }

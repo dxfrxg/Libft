@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: daxferna <daxferna@student.42madrid.com    +#+  +:+       +#+        */
+/*   By: daxferna <daxferna@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/31 03:14:33 by daxferna          #+#    #+#             */
-/*   Updated: 2024/03/04 18:09:03 by daxferna         ###   ########.fr       */
+/*   Updated: 2024/02/04 20:09:35 by daxferna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 		p = malloc(len + 1);
 	else
 		p = malloc(slen - start + 1);
-	if (!p)
+	if (p == 0)
 		return (0);
 	while (i < len && s[start + i] != 0)
 	{
