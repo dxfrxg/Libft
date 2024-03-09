@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: daxferna <daxferna@student.42.fr>          +#+  +:+       +#+        */
+/*   By: daxferna <daxferna@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/04 19:01:24 by daxferna          #+#    #+#             */
-/*   Updated: 2024/02/08 20:11:36 by daxferna         ###   ########.fr       */
+/*   Updated: 2024/03/09 23:09:32 by daxferna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,3 +54,19 @@ void	ft_putnbr_fd(int n, int fd)
 			ft_print(num, fd);
 	}
 }
+
+/*
+int main(void)
+{
+    ft_putnbr_fd(123, 1);
+    ft_putchar_fd('\n', 1);
+
+    ft_putnbr_fd(-456, 1);
+    ft_putchar_fd('\n', 1);
+
+    ft_putnbr_fd(0, 1);
+    ft_putchar_fd('\n', 1);
+
+    return 0;
+}
+*/

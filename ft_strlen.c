@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: daxferna <daxferna@student.42.fr>          +#+  +:+       +#+        */
+/*   By: daxferna <daxferna@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/10 22:35:46 by daxferna          #+#    #+#             */
-/*   Updated: 2024/02/10 23:30:49 by daxferna         ###   ########.fr       */
+/*   Updated: 2024/03/09 23:08:58 by daxferna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,3 +21,13 @@ int	ft_strlen(const char *s)
 		i++;
 	return (i);
 }
+
+/*
+int main(void)
+{
+    char str1[] = "Hello, World!";
+    printf("String: \"%s\"\nLength: %d\n\n", str1, ft_strlen(str1));
+
+    return 0;
+}
+*/

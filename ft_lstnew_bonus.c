@@ -6,7 +6,7 @@
 /*   By: daxferna <daxferna@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/24 20:21:37 by dxfrxg            #+#    #+#             */
-/*   Updated: 2024/03/05 03:53:27 by daxferna         ###   ########.fr       */
+/*   Updated: 2024/03/09 23:51:19 by daxferna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,3 +23,20 @@ t_list	*ft_lstnew(void *content)
 	node->next = 0;
 	return (node);
 }
+
+/*
+int main()
+{
+    int *dato = malloc(sizeof(int));
+    *dato = 42;
+
+    t_list *nodo = ft_lstnew(dato);
+
+    printf("Nuevo nodo: %d\n", *((int *)nodo->content));
+
+    free(nodo->content);
+    free(nodo);
+
+    return 0;
+}
+*/

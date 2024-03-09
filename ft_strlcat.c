@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: daxferna <daxferna@student.42.fr>          +#+  +:+       +#+        */
+/*   By: daxferna <daxferna@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/29 19:56:37 by daxferna          #+#    #+#             */
-/*   Updated: 2024/01/30 00:22:29 by daxferna         ###   ########.fr       */
+/*   Updated: 2024/03/09 23:53:12 by daxferna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,3 +32,16 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 	}
 	return (i + ft_strlen(src));
 }
+
+/*
+int main(void)
+{
+    char dst1[15] = "Hello";
+    char *src1 = " World!";
+    size_t result1 = ft_strlcat(dst1, src1, sizeof(dst1));
+    printf("Original Destination: \"%s\"\nSource: \"%s\"\n\
+	Result: \"%s\"\nReturn Value: %zu\n\n", "Hello", src1, dst1, result1);
+
+    return 0;
+}
+*/

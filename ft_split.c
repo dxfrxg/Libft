@@ -3,15 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: daxferna <daxferna@student.42.fr>          +#+  +:+       +#+        */
+/*   By: daxferna <daxferna@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/04 19:01:41 by daxferna          #+#    #+#             */
-/*   Updated: 2024/02/13 18:54:32 by daxferna         ###   ########.fr       */
+/*   Updated: 2024/03/09 23:09:20 by daxferna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
 static int	ft_countwords(const char *s, char c)
 {
@@ -93,3 +92,27 @@ char	**ft_split(char const *s, char c)
 	}
 	return (p);
 }
+
+/*
+static void print_string_array(char **arr)
+{
+    while (*arr)
+    {
+        printf("%s\n", *arr);
+        arr++;
+    }
+}
+
+int main(void)
+{
+
+    char *str1 = "This is a test string 42";
+    char **result1 = ft_split(str1, ' ');
+    printf("Original String: \"%s\"\nResult:\n", str1);
+    print_string_array(result1);
+
+    free(result1);
+
+    return 0;
+}
+*/

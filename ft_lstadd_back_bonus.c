@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstadd_back_bonus.c                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dxfrxg <dxfrxg@student.42.fr>              +#+  +:+       +#+        */
+/*   By: daxferna <daxferna@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/24 20:21:45 by dxfrxg            #+#    #+#             */
-/*   Updated: 2024/02/28 18:36:33 by dxfrxg           ###   ########.fr       */
+/*   Updated: 2024/03/09 23:16:23 by daxferna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,3 +21,23 @@ void	ft_lstadd_back(t_list **lst, t_list *new)
 	else
 		ft_lstlast(*lst)->next = new;
 }
+
+/*
+int main()
+{
+    t_list *lista = 0;
+    t_list nodo1 = {"hola", 0};
+    t_list nodo2 = {"hello", 0};
+
+    ft_lstadd_back(&lista, &nodo1);
+    ft_lstadd_back(&lista, &nodo2);
+
+    while (lista)
+    {
+        printf("%s ", (char *)lista->content);
+        lista = lista->next;
+    }
+
+    return 0;
+}
+*/
